@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.rjhy.cloud</groupId>
+	<artifactId>maven-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<!-- 配置聚合 -->
+	<modules>
+		<!-- 指定各个子工程的相对路径 -->
+		<module>../eureka-bus</module>
+		<module>../eureka-config-client</module>
+		<module>../eureka-config-server</module>
+		<module>../eureka-server</module>
+		<module>../eureka-zuul</module>
+		<module>../demo-provider</module>
+		<module>../demo-consumer</module>
+		<module>../hystrix-dashboard</module>
+		<module>../hystrix-turbine</module>
+		<module>../sleuth-server</module>
+		<module>../consul-server</module>
+		<module>../ssm-provider</module>
+	</modules>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.M3</version> <!-- 1.5.9.RELEASE -->
+	</parent>
+	<!-- 配置依赖的管理 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.9</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Finchley.M2</version> <!-- Edgware.RELEASE -->
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+</project>

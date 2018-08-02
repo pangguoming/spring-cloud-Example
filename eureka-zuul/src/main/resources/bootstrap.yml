@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-config-zuul
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: eureka-config-server
+      profile: dev   # eureka-config-zuul-dev.yml
+server:
+  port: 9000
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+extraProperties=sonar.host.url\=http\://192.168.5.200\:9000\r\nsonar.jdbc.password\=sonar\r\nsonar.jdbc.url\=jdbc\:mysql\://192.168.5.200\:3306/sonar?useUnicode\=true&characterEncoding\=utf8&rewriteBatchedStatements\=true\r\nsonar.jdbc.username\=sonar
+projectKey=com.rjhy.cloud\:eureka-server
+serverUrl=http\://192.168.5.200\:9000
+version=2
